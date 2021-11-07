@@ -1,0 +1,30 @@
+mat-slide-toggle {
+  margin-left: 20px;
+
+  ::ng-deep .mat-slide-toggle-content {
+    overflow: visible;
+  }
+}
+
+.icon-task {
+  margin-top: -10px;
+
+  .mat-icon {
+    font-size: 50px;
+    height: 50px;
+    width: 50px;
+    color: #683ab6;
+  }
+}
+
+.mediumpurple {
+  color: mediumpurple;
+}
+
+.cornflowerblue {
+  color: cornflowerblue;
+}
+
+.coral {
+  color: coral;
+}

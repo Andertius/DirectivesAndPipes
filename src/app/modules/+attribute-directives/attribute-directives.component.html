@@ -1,0 +1,50 @@
+<div class="topic-item ng-class-topic">
+  <div class="topic-title">
+    ngModel - adds two-way data binding to an HTML form element
+  </div>
+
+  <div class="topic-task">
+    Bind select to "color" variable
+  </div>
+
+  <div class="task">
+    <mat-form-field appearance="fill" class="user-select">
+      <mat-label>Select color</mat-label>
+
+      <mat-select [(ngModel)]="color">
+        <mat-option value="mediumpurple">Medium Purple</mat-option>
+        <mat-option value="cornflowerblue">Cornflower Blue</mat-option>
+        <mat-option value="coral">Coral</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+</div>
+
+
+<div class="topic-item ng-class-topic">
+  <div class="topic-title">
+    ngClass - adds and removes a set of CSS classes
+  </div>
+
+  <div class="topic-task">
+    Change class depending on user select (use user selected value as a class name)
+  </div>
+
+  <div class="task" [ngClass]="color">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+  </div>
+</div>
+
+<div class="topic-item ng-class-topic">
+  <div class="topic-title">
+    ngStyle - adds and removes a set of HTML styles
+  </div>
+
+  <div class="topic-task">
+    Change text color depending on user select (use user selected value as a color value)
+  </div>
+
+  <div class="task" [ngStyle]="{'color': color}">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+  </div>
+</div>

@@ -1,0 +1,38 @@
+<div class="topic-item ng-class-topic">
+  <div class="topic-title">
+    Simplest Built-in Directives
+  </div>
+
+  <div class="topic-task">
+    Transform today date ({{todayDate}}) using 'date' pipe
+  </div>
+
+  <div class="task">
+    Transformed today date - {{todayDate | date}}
+  </div>
+
+  <div class="topic-task mt-20">
+    Transform today date ({{todayDate}}) using 'date' pipe in 'MM/dd/yy' format
+  </div>
+
+  <div class="task">
+    Transformed today date - {{todayDate | date: 'MM/dd/yy'}}
+  </div>
+</div>
+
+<div class="topic-item ng-class-topic">
+  <div class="topic-title">
+    Directives Chaining
+  </div>
+
+  <div class="topic-task">
+    Transform your money ({{money}}) in Euro currency (first with symbol, next with code) and everything should be in
+    upper case.
+  </div>
+
+  <div class="task">
+    Balance: {{money | currency : 'EUR' : 'symbol' | uppercase}}
+    <br>
+    Balance: {{money | currency : 'EUR' | uppercase}}
+  </div>
+</div>

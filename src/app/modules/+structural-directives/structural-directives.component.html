@@ -1,0 +1,72 @@
+<div class="topic-item ng-class-topic">
+  <div class="topic-title">
+    ngIf - conditionally creates or disposes of subviews from the template
+  </div>
+
+  <div class="topic-task task-with-offset">
+    Implement text showing/hiding on toggle status
+
+    <mat-slide-toggle [(ngModel)]="showText">{{showText ? 'Show' : 'Hide'}}</mat-slide-toggle>
+  </div>
+
+  <div class="task" *ngIf="showText">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+  </div>
+
+
+  <div class="topic-task mt-20" >
+    Show text if toggle is equal 'true'. If 'false' - show 'N/A' text inside div
+  </div>
+
+  <div class="task" *ngIf="showText else NA">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+  </div>
+
+  <ng-template #NA>
+    <div>qwerty</div>
+  </ng-template>
+</div>
+
+<div class="topic-item ng-class-topic">
+  <div class="topic-title">
+    ngFor - repeat a node for each item in a list
+  </div>
+
+  <div class="topic-task">
+    Display all elements of array Colors (extra task: each element should be colored as its value)
+  </div>
+
+  <div class="task" *ngFor="let color of colors" [ngClass]="color">
+    {{color}}
+  </div>
+</div>
+
+<div class="topic-item ng-class-topic">
+  <div class="topic-title">
+    ngSwitch - a set of directives that switch among alternative views.
+  </div>
+
+  <div class="topic-task">
+    Display element depending on user select
+
+    <div>
+      <mat-form-field appearance="fill" class="user-select">
+        <mat-label>Select Object</mat-label>
+
+        <mat-select [(ngModel)]="object">
+          <mat-option value="House">House</mat-option>
+          <mat-option value="Person">Person</mat-option>
+          <mat-option value="Car">Car</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+  </div>
+
+  <div class="task icon-task" [ngSwitch]="object">
+    <mat-icon *ngSwitchCase="'House'">home</mat-icon>
+
+    <mat-icon *ngSwitchCase="'Person'">accessibility</mat-icon>
+
+    <mat-icon *ngSwitchDefault>directions_car</mat-icon>
+  </div>
+</div>

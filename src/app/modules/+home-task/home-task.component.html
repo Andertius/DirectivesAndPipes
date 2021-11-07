@@ -1,0 +1,43 @@
+<div class="topic-item">
+  <div class="topic-title">
+    HOME TASK :)
+  </div>
+
+  <div class="topic-task">
+    Provide two-way binding of color variable to input
+  </div>
+
+  <div class="topic-task">
+    Create directive that will let user enter only letters and numbers. Keep in mind to let user delete values from
+    the input :)
+  </div>
+
+  <div class="topic-task">
+    Create directive that will set entered color as element background if it is valid. Apply it to input
+  </div>
+
+  <div class="topic-task">
+    Create directive that will set entered color as text color on hovering. If color is incorrect - make text red on
+    hover. Apply
+    it to 'Entered color: value' text
+  </div>
+
+  <div class="topic-task">
+    Create pipe that would reverse text. Apply it to 'Reversed color' value
+  </div>
+
+  <div class="topic-task">
+    Apply directive that colors on hover to 'Reversed color: value', but it should highlights in reversed color;
+  </div>
+
+  <div class="task">
+    <mat-form-field appearance="fill">
+      <mat-label>Enter color in HEX format</mat-label>
+
+      <input matInput [(ngModel)]="color" appOnlyAlphanumerics [input]="color" appChangeBackground [color]="color" #colorInput>
+    </mat-form-field>
+
+    <div (mouseenter)="mouseEnter()" (mouseleave)="mouseLeave()" #enteredColor>Entered color: #{{ color }}</div>
+    <div (mouseenter)="mouseEnterReverse()" (mouseleave)="mouseLeaveReverse()" #reversedColor>Reversed color: #{{ color | reverse }}</div>
+  </div>
+</div>

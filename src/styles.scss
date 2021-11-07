@@ -1,1 +1,121 @@
 /* You can add global styles to this file, and also import other style files */
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.mat-slide-toggle {
+  &.mat-checked {
+    .mat-slide-toggle-thumb {
+      background-color: #8ac743;
+    }
+
+    .mat-slide-toggle-bar {
+      background-color: #8ac74394;
+    }
+  }
+}
+
+.topic-item {
+  margin-bottom: 20px;
+  border-top: 1px solid #673ab7;
+  padding: 10px 0;
+
+  .topic-title {
+    font-size: 20px;
+    font-weight: 500;
+    padding-bottom: 5px;
+  }
+
+  .topic-task {
+    position: relative;
+    padding-left: 15px;
+    font-style: italic;
+    margin-left: 10px;
+    margin-bottom: 10px;
+
+    &.task-with-offset:before {
+      top: 9px;
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      height: 10px;
+      width: 10px;
+      background-color: #89c843;
+      left: 0;
+      top: 5px;
+      border-radius: 5px;
+    }
+  }
+
+  .task {
+    font-size: 15px;
+    margin-top: 20px;
+    font-weight: 500;
+
+    .user-select {
+      font-size: 15px;
+      margin-bottom: -20px;
+    }
+  }
+}
+
+.mt-20 {
+  margin-top: 20px;
+}
+
+// GHOST LOADING
+.parent-ghost {
+  position: relative;
+  visibility: hidden;
+
+  &::after {
+    visibility: visible;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #e0e0e0;
+    content: '';
+    z-index: 1;
+    animation: blinker 2s linear infinite;
+    border-radius: 0.25rem;
+  }
+
+  * {
+    visibility: hidden;
+  }
+
+  .child-ghost {
+    visibility: hidden;
+    position: relative;
+
+    &::after {
+      visibility: visible;
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 100%;
+      content: '';
+      background-color: #ffffff;
+      z-index: 2;
+      animation: blinker 2s linear infinite;
+      border-radius: 0.25rem;
+    }
+  }
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0.3;
+  }
+}
+

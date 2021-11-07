@@ -1,0 +1,49 @@
+<div class="topic-item ng-class-topic">
+  <div class="topic-title">
+    Custom Attribute Directives
+  </div>
+
+  <div class="topic-task task-with-offset">
+    Create custom directive for "ghost loading". Color wrapper elements in grey and child elements in white.
+
+    <mat-slide-toggle [(ngModel)]="isLoading">{{isLoading ? 'Loading' : 'Not loading'}}</mat-slide-toggle>
+  </div>
+
+  <div class="task">
+    <div class="text-wrapper" appGhostLoading [isLoading]="isLoading">
+      <div class="text-title">
+        <span appGhostLoading [isLoading]="isLoading" [isChild]="true">Lorem Ipsum</span>
+      </div>
+
+      <div class="text">
+        <div appGhostLoading [isLoading]="isLoading" [isChild]="true">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac sollicitudin odio. In ullamcorper ante
+          sed faucibus volutpat. Maecenas pulvinar nisi ut porta tincidunt. Aenean vel bibendum enim. Sed commodo,
+          arcu at blandit mattis, augue purus commodo est, non fringilla nibh est quis quam. Sed nec ultrices sapien.
+          Cras risus turpis, consequat a nisl luctus, lobortis tempus erat. Sed vel ullamcorper lectus, hendrerit
+          congue neque. Fusce lectus lectus, venenatis vitae blandit eu, aliquam id nisi.
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="topic-item ng-class-topic">
+  <div class="topic-title">
+    Custom Structural Directives
+  </div>
+
+  <div class="topic-task task-with-offset">
+    Create custom directive to hide elements on 'true' condition (Opposite to ngIf and similar to ng-hide in AngularJS)
+
+    <mat-slide-toggle [(ngModel)]="isHidden">{{isHidden ? 'Hidden' : 'Shown'}} (value is {{isHidden.toString()}})
+    </mat-slide-toggle>
+  </div>
+
+  <div class="task">
+    <div *ngIf="isHidden">I am shown when value is TRUE (ngIf)</div>
+    <div *ngIf="!isHidden">I am shown when value is TRUE (ngIf) with !</div>
+
+    <div *appHide="isHidden">Show me when value is FALSE (*appHide)</div>
+  </div>
+</div>

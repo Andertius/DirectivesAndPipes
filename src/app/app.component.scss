@@ -1,0 +1,12 @@
+.navigation-item {
+  margin-left: 20px;
+
+  &.router-link-active {
+    background: #89c843;
+  }
+}
+
+.main-container {
+  padding: 20px;
+}
+

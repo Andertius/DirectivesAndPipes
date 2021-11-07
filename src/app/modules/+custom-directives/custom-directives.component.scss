@@ -1,0 +1,20 @@
+.text-wrapper {
+  padding: 10px 0;
+
+  .text-title {
+    padding: 10px;
+  }
+
+  .text {
+    padding: 10px;
+  }
+}
+
+
+mat-slide-toggle {
+  margin-left: 20px;
+
+  ::ng-deep .mat-slide-toggle-content {
+    overflow: visible;
+  }
+}

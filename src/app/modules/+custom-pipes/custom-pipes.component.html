@@ -1,0 +1,27 @@
+<div class="topic-item ng-class-topic">
+  <div class="topic-title">
+    Custom Pipes
+  </div>
+
+  <div class="topic-task">
+    Create custom pipe "Placeholder", which will replace empty value with 'N/A'.
+
+    <mat-form-field appearance="fill">
+      <mat-label>Enter some value</mat-label>
+
+      <input matInput [(ngModel)]="userInput">
+    </mat-form-field>
+  </div>
+
+  <div class="task">
+    User input: {{userInput | placeholder}}
+  </div>
+
+  <div class="topic-task mt-20">
+    Update "Placeholder" pipe. Provide possibility to set own value for empty input.
+  </div>
+
+  <div class="task">
+    User input: {{userInput | placeholder : 'some custom placeholder'}}
+  </div>
+</div>
